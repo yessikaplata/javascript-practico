@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css");
+
+html {
+    font-size: 55%;
+}
+
+body {
+    background-image: url("../assets/img_background.jpg");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Comfortaa;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.tittle{
+
+    color: white;
+}
+.tittle h1{
+    font-size: 4rem !important;
+}
+
+.tittle p{
+    font-size: 2.5rem !important;
+}
+.figure{    
+    font-size: 4.5rem !important;
+}
+
+.card {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+.card p{
+    font-weight: 700 !important;
+}
+
+.btn {
+    font-size: 1.6rem !important;
+    margin: 5px;
+}
+
+.form-control{
+    font-size: 1.6rem !important;
+}

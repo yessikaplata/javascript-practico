@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/figuras.js"></script>
+    <title>Figuras geométricas | Javascript Práctico</title>
+</head>
+
+<body>
+    <div class="container overflow-hidden">
+        <div class="row">
+            <div class="col-sm text-center tittle">
+                <h1>Figuras geométricas</h1>
+                <p>Taller práctico de Javascript</p>
+                <i class="bi bi-square figure"></i>
+                <i class="bi bi-triangle figure"></i>
+                <i class="bi bi-circle figure"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm card">
+                <p class="text-center font-weight-bold">Calcula el área y perímetro de un cuadrado</p>
+                <i class="bi bi-square figure text-center"></i>
+                <form>
+                    <br />
+                    <div class="form-group">
+                        <label for="inputCuadrado">Escribe cuánto mide cada lado (cm)</label>
+                        <input id="inputCuadrado" type="number" class="form-control" />
+                        <br />
+                        <button type="button" onclick="calcularCuadrado()"
+                            class="btn btn-info">Calcular</button><br /><br />
+                        <label class="font-weight-bold">Resultado:</label><br />
+                        <label id="resultadoPerimetroCuadrado"></label><br />
+                        <label id="resultadoAreaCuadrado"></label>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm card">
+                <p class="text-center">Calcula el área y perímetro de un círculo</p>
+                <i class="bi bi-circle figure text-center"></i>
+                <form>
+                    <br />
+                    <div class="form-group">
+                        <label for="inputRadio">Escribe cuánto mide el radio (cm)</label>
+                        <input id="inputRadio" type="number" class="form-control" />
+                    </div>
+                    <br />
+                    <button type="button" onclick="calcularCirculo()" class="btn btn-info">Calcular</button><br /><br />
+                    <label class="font-weight-bold">Resultado:</label><br />
+                    <label id="resultadoPerimetroCirculo"></label><br />
+                    <label id="resultadoAreaCirculo"></label>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm card">
+                <p class="text-center">Calcula el área y perímetro de un tríangulo</p>
+                <i class="bi bi-triangle figure text-center"></i>
+                <form>
+                    <br />
+                    <div class="form-group">
+                        <label for="inputTriangulo1">Escribe cuánto mide el lado 1 (cm)</label>
+                        <input id="inputTriangulo1" type="number" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTriangulo2">Escribe cuánto mide el lado 2 (cm)</label>
+                        <input id="inputTriangulo2" type="number" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTrianguloBase">Escribe cuánto mide la base (cm)</label>
+                        <input id="inputTrianguloBase" type="number" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTrianguloAltura">Escribe cuánto mide la altura (cm)</label>
+                        <input id="inputTrianguloAltura" type="number" class="form-control" />
+                    </div>
+                    <br />
+                    <button type="button" onclick="calcularTriangulo()"
+                        class="btn btn-info">Calcular</button><br /><br />
+                    <label class="font-weight-bold">Resultado:</label><br />
+                    <label id="resultadoPerimetroTriangulo"></label><br />
+                    <label id="resultadoAreaTriangulo"></label>
+                </form>
+            </div>
+            <div class="col-sm card">
+                <p class="text-center">Calcula la altura de un triángulo isóceles</p>
+                <i class="bi bi-triangle figure text-center"></i>
+                <form>
+                    <br />
+                    <div class="form-group">
+                        <label for="inputIsoceles1">Escribe cuánto mide el lado 1 (cm)</label>
+                        <input id="inputIsoceles1" type="number" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputIsoceles2">Escribe cuánto mide el lado 2 (cm)</label>
+                        <input id="inputIsoceles2" type="number" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputIsocelesBase">Escribe cuánto mide la base (cm)</label>
+                        <input id="inputIsocelesBase" type="number" class="form-control" />
+                    </div>
+                    <br />
+                    <button type="button" onclick="calcularAlturaIsoceles()"
+                        class="btn btn-info">Calcular</button><br /><br />
+                    <label class="font-weight-bold">Resultado:</label><br />
+                    <label id="resultadoAlturaIsoceles"></label><br />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
