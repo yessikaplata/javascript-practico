@@ -20,19 +20,26 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
 }
-.tittle{
+
+.tittle {
 
     color: white;
 }
-.tittle h1{
+
+.tittle h1 {
     font-size: 4rem !important;
 }
 
-.tittle p{
+.tittle p {
     font-size: 2.5rem !important;
 }
-.figure{    
+
+.figure {
     font-size: 4.5rem !important;
+}
+
+.big_figure {
+    font-size: 7.5rem !important;
 }
 
 .card {
@@ -41,7 +48,8 @@ body {
     padding: 20px;
     margin: 10px;
 }
-.card p{
+
+.card p {
     font-weight: 700 !important;
 }
 
@@ -50,6 +58,18 @@ body {
     margin: 5px;
 }
 
-.form-control{
+.form-control {
     font-size: 1.6rem !important;
+}
+
+.width70 {
+    width: 70% !important;
+}
+
+.height50{
+    height: 50px !important;
+}
+.footer{    
+    font-size: 1.5rem !important;
+    color: white;
 }
