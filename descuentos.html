@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/descuentos.js"></script>
+    <title>Porcentajes y Descuentos | Javascript Práctico</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-sm text-center tittle">
+                <h1>Calculadora de descuentos</h1>
+                <p>Taller práctico de Javascript</p>
+                <i class="bi bi-cart-fill big_figure"></i>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-sm card text-center">
+                <p class="text-center font-weight-bold">Calcula precio con porcentaje</p>
+                <form>
+                    <br />
+                    <div class="form-group">
+                        <label for="inputPrice">Precio</label>
+                        <input id="inputPrice" type="number" class="form-control height50" />
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="inputDiscount">Descuento (en %)</label>
+                        <input id="inputDiscount" type="number" class="form-control height50" />
+                    </div>
+                    <br />
+                    <button type="button" onclick="onClickButtonCalculatePrice()"
+                        class="btn btn-info">Calcular</button><br /><br />
+                    <label class="font-weight-bold">Resultado:</label><br />
+                    <label id="finalPrice"></label>
+                </form>
+            </div>
+            <div class="col-sm card text-center">
+                <p class="text-center font-weight-bold">Calcula precio con cupon de descuento</p>
+                <form>
+                    <br />
+                    <div class="form-group">
+                        <label for="inputPriceVoucher">Precio</label>
+                        <input id="inputPriceVoucher" type="number" class="form-control height50" />
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="inputVoucher">Cupón de descuento</label>
+                        <input id="inputVoucher" type="text" class="form-control height50" />
+                    </div>
+                    <br />
+                    <button type="button" onclick="onClickButtonCalculatePriceVoucher()"
+                        class="btn btn-info">Calcular</button><br /><br />
+                    <label class="font-weight-bold">Resultado:</label><br />
+                    <label id="finalPriceVoucher"></label>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
