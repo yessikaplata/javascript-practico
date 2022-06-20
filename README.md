@@ -1,6 +1,7 @@
 # Javascript-practico
 
-...
+## 
+https://yessikaplata.github.io/javascript-practico
 
 ## Taller #1: Figuras geométricas
 
