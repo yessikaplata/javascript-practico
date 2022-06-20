@@ -30,7 +30,7 @@
 - Tercer paso: Crear funciones
 - Cuarto paso: Integrar Javascript con HTML
 
-## Taller #4: Préstamo, intereses
+## Taller #5: Préstamo, intereses
 
 - Primer paso: definir las fórmulas
 - Segundo paso: Implementar fórmulas en Javascript
