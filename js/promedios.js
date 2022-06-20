@@ -1,7 +1,7 @@
 function calculateArithmeticAverage(list) {
     const sum = list.reduce((partialSum, value) => partialSum + Number(value), 0);
     const average = sum / list.length;
-    return Math.round(average*100)/100;
+    return Math.round(average * 100) / 100;
 }
 
 function calculateMedian(list) {
@@ -43,10 +43,19 @@ function calculateMode(list) {
     return listOrderedByCount.pop()[0];
 }
 
+function calculateWeightedAverage(listData) {
+    console.log(listData);
+    const sumWeights = listData.reduce((partialSum, value) => partialSum + Number(value[1]), 0);
+    console.log(sumWeights);
+    const sumDataByWeights = listData.reduce((partialSum, value) => partialSum + (Number(value[0]) * Number(value[1])), 0);
+    const weightedAverage = sumDataByWeights / sumWeights
+    return Math.round(weightedAverage * 100) / 100;
+}
+
 function onClickButtonCalculateAverage() {
     const dataStr = document.getElementById("inputDataAverage").value;
     const lblAverage = document.getElementById("lblAverage");
-    const dataList = dataStr.split(",").map((item)=>item.trim());
+    const dataList = dataStr.split(",").map((item) => item.trim());
     const average = calculateArithmeticAverage(dataList)
     lblAverage.textContent = `La media es: ${average} `;
 }
@@ -56,7 +65,7 @@ function onClickButtonCalculateMedian() {
     const dataStr = document.getElementById("inputDataMedian").value;
     const lblMedian1 = document.getElementById("lblMedian1");
     const lblMedian2 = document.getElementById("lblMedian2");
-    const dataList = dataStr.split(",").map((item)=>item.trim());
+    const dataList = dataStr.split(",").map((item) => item.trim());
     const median = calculateMedian(dataList);
     lblMedian1.textContent = `La lista ordenada es: ${dataList.sort((a, b) => a - b)} `;
     lblMedian2.textContent = `La mediana es: ${median} `;
@@ -65,7 +74,16 @@ function onClickButtonCalculateMedian() {
 function onClickButtonCalculateMode() {
     const dataStr = document.getElementById("inputDataMode").value;
     const lblMode = document.getElementById("lblMode");
-    const dataList = dataStr.split(",").map((item)=>item.trim());
+    const dataList = dataStr.split(",").map((item) => item.trim());
     const mode = calculateMode(dataList);
     lblMode.textContent = `La moda es: ${mode} `;
+}
+
+function onClickButtonCalculateaWeightedAverage(){
+    const dataStr = document.getElementById("inputDataWeights").value;    
+    const lblWeightedAverage = document.getElementById("lblWeightedAverage");
+    const dataList = dataStr.split(";").map((item) => item.trim());
+    const dataListWeights = dataList.map((value) => value.split(",").map((item) => item.trim()));
+    const weightedAverage = calculateWeightedAverage(dataListWeights);
+    lblWeightedAverage.textContent = `El promedio ponderado es: ${weightedAverage} `;    
 }

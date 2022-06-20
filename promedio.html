@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-sm text-center tittle">
-                <h1>Calcular Media, Mediana y Moda</h1>
+                <h1>Calcular Media, Mediana, Moda, Promedio ponderado</h1>
                 <p>Taller práctico de Javascript</p>
                 <i class="bi bi-file-bar-graph-fill big_figure"></i>
             </div>
@@ -55,6 +55,9 @@
                     <label id="lblMedian2"></label>
                 </form>
             </div>
+        </div>
+        
+        <div class="row justify-content-md-center">
             <div class="col-sm card text-center">
                 <p class="text-center font-weight-bold">Calcular la moda</p>
                 <form>
@@ -68,6 +71,20 @@
                         class="btn btn-info">Calcular</button><br /><br />
                     <label class="font-weight-bold">Resultado:</label><br />
                     <label id="lblMode"></label>
+                </form>
+            </div>
+            <div class="col-sm card text-center">
+                <p class="text-center font-weight-bold">Calcular promedio pondeardo</p>
+                <form>
+                    <div class="form-group">
+                        <label for="inputDataWeights">Ingrese los datos y las ponderaciones así dato1,ponderacion1; dato2, ponderacion2; datoN, ponderacionN. Ej: 5,1;7,4;2,5</label>
+                        <input id="inputDataWeights" type="text" class="form-control height50" />
+                    </div>
+                    <br />
+                    <button type="button" onclick="onClickButtonCalculateaWeightedAverage()"
+                        class="btn btn-info">Calcular</button><br /><br />
+                    <label class="font-weight-bold">Resultado:</label><br />
+                    <label id="lblWeightedAverage"></label>
                 </form>
             </div>
         </div>
